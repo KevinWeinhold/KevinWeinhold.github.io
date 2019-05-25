@@ -80,6 +80,8 @@ img {
   width: 63vh;
   margin-top: 10px;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
   cursor: none;
 }
 
@@ -125,7 +127,8 @@ button,
   display: inline-block;
 }
 
-div {
+div,
+div #pics {
   text-align: center;
 }
 

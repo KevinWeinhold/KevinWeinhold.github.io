@@ -78,8 +78,8 @@ img {
     width: 63vh;
     margin-top: 10px;
     height: 100%;
-    // margin-left: auto;
-    // margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     cursor: none;
 }
 
@@ -129,10 +129,14 @@ button,
     // margin-right: .5rem;
 }
 
-div {
+div,
+div #pics {
     text-align: center;
 }
 
+// div #pics {
+//     margin: 0 auto;
+// }
 #social {
     display: flex;
 }
