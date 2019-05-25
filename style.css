@@ -5,6 +5,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  cursor: none;
+}
+
 body {
   font: 1.2rem 'Raleway', Helvetica, sans-serif;
   padding: 0;
