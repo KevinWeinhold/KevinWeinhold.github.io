@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kevin Weinhold | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body #home onload="followMouse();" id="homebody">
+    <header>
+        <div>
+            <h1><a id='kev' href='index.html'>Kevin Weinhold</a></h1>
+        </div>
+        <nav id='navoptions'>
+            <ul>
+                <li id='nav1' class="current"><a href="index.html">Home</a></li>
+                <li id='nav2'><a href="work.html">Work</a></li>
+                <li id='nav3'><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bio">
+        <div class="container">
+            <h1>Hi, My name is Kevin.</h1>
+            <p>I am a 19 year old computer science major at Arizona State University. I enjoy designing, coding, snowboarding, and occaisional dance parties. Currently working for the<a href='https://www.statepress.com'> State Press</a> at ASU.
+            </p>
+        </div>
+    </div>
+    <div id='social'>
+        <div id='social1'>
+            <a href='https://www.instagram.com/dadboarder/?hl=en'><img src="./img/instagram.png" alt="Instagram"></a>
+            <a href="https://twitter.com/KevinWeinhold"><img src="./img/twitter.png" alt="Twitter"></a>
+            <button id='tippyboi' onclick="copy('kweinhold22@gmail.com')"><img src="./img/email.png" alt="email"></button>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div id="ball"></div>
+    </div>
+
+
+    <script>
+        // copy function
+        function copy(text) {
+            var textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+        }
+
+        // Tippy
+        tippy('#tippyboi', {
+            content: "Copied kweinhold22@gmail.com",
+            animation: 'shift-toward',
+            placement: 'bottom',
+            trigger: 'click',
+        })
+    </script>
+
+    <!-- Follow Mouse  -->
+    <script type="text/javascript">
+        var $ = document.querySelector.bind(document);
+        var $on = document.addEventListener.bind(document);
+
+        var xmouse, ymouse;
+        $on('mousemove', function(e) {
+            xmouse = e.clientX || e.pageX;
+            ymouse = e.clientY || e.pageY;
+        });
+
+        var ball = $('#ball');
+        var x = void 0,
+            y = void 0,
+            dx = void 0,
+            dy = void 0,
+            tx = 0,
+            ty = 0,
+            key = -1;
+
+        var followMouse = function followMouse() {
+            key = requestAnimationFrame(followMouse);
+
+            if (!x || !y) {
+                x = xmouse;
+                y = ymouse;
+            } else {
+                dx = (xmouse - x) * 0.125;
+                dy = (ymouse - y) * 0.125;
+                if (Math.abs(dx) + Math.abs(dy) < 0.1) {
+                    x = xmouse;
+                    y = ymouse;
+                } else {
+                    x += dx;
+                    y += dy;
+                }
+            }
+            ball.style.left = x + 'px';
+            ball.style.top = y + 'px';
+        };
+
+        // TweenMax Animations
+
+        TweenMax.from("#kev", 0.5, {
+            opacity: 0,
+            y: 10,
+            delay: .25
+        });
+
+        TweenMax.from("#nav1", 0.7, {
+            opacity: 0,
+            y: 10,
+            delay: .3
+        });
+        TweenMax.from("#nav2", 0.7, {
+            opacity: 0,
+            y: 10,
+            delay: .35
+        });
+        TweenMax.from("#nav3", 0.7, {
+            opacity: 0,
+            y: 10,
+            delay: .4
+        });
+
+        TweenMax.from(".bio", .8, {
+            opacity: 0,
+            y: 10,
+            delay: .5
+        });
+
+        TweenMax.from("#social", .9, {
+            opacity: 0,
+            y: 10,
+            delay: .6
+        });
+    </script>
+
+</body>
+
+</html>

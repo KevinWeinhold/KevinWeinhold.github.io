@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kevin Weinhold | Work</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body #home onload="followMouse();">
+    <header>
+        <div>
+            <h1 id="kevin"><a href="index.html">Kevin Weinhold</a></h1>
+        </div>
+        <nav id='navoptions'>
+            <ul>
+                <li id='nav1'><a href="index.html">Home</a></li>
+                <li id='nav2' class="current"><a href="work.html">Work</a></li>
+                <li id='nav3'><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id='tabs'>
+        <h1>State Press Tabs: React JS</h1>
+        <p>This was my first real coding project for the State Press. With the help of Chuck Dries, former software developer for State Press, I learned the basics of react</p>
+        <iframe src="https://thestatepress.github.io/magazine-tabs-project/" width="100%" height="410" frameborder="100" id='iframe'></iframe>
+    </div>
+    <div id='pics'>
+        <h1>Magazine Covers</h1>
+        <img src="./img/Copy of 1 (1)_page-0001.jpg" alt="Ashes Unity Issue 2017">
+        <img src="./img/0001.jpg" alt="Pink Ashes Cover 2018">
+        <img src="./img/elephantintheroom.jpg" alt="Elephant in the Room with Stella">
+        <img src="./img/Culturecover.jpg" alt="Culture Issue 2019">
+
+
+        <h1>Other Designs</h1>
+        <img src="./img/Copy of 12-13-1.jpg" alt="Foreign Exchange Program">
+        <img src="./img/Copy of 12-13-2.jpg" alt="Foreign Exchange Program pg.2">
+        <img src="./img/Copy of 24-1.jpg" alt="Ashes Pink Cover">
+        <img src="./img/boBrooks.jpg" alt="Film Isn't Dead">
+        <img src="./img/Copy of Brochure 1-1.jpg" alt="Class of 2018 Brochure">
+    </div>
+
+    <!-- Follow Mouse -->
+
+    <div class="wrap">
+        <div id="ball"></div>
+    </div>
+
+    <script type="text/javascript">
+        var $ = document.querySelector.bind(document);
+        var $on = document.addEventListener.bind(document);
+
+        var xmouse, ymouse;
+        $on('mousemove', function(e) {
+            xmouse = e.clientX || e.pageX;
+            ymouse = e.clientY || e.pageY;
+        });
+
+        var ball = $('#ball');
+        var x = void 0,
+            y = void 0,
+            dx = void 0,
+            dy = void 0,
+            tx = 0,
+            ty = 0,
+            key = -1;
+        var yscroll = 0;
+        window.onscroll = function(e) {
+            yscroll = window.scrollY;
+        };
+
+
+        var followMouse = function followMouse() {
+            key = requestAnimationFrame(followMouse);
+
+            if (!x || !y) {
+                x = xmouse;
+                y = ymouse;
+            } else {
+                dx = (xmouse - x) * 0.125;
+                dy = (ymouse - y) * 0.125;
+                if (Math.abs(dx) + Math.abs(dy) < 0.1) {
+                    x = xmouse;
+                    y = ymouse;
+                } else {
+                    x += dx;
+                    y += dy;
+                }
+            }
+            ball.style.left = x + 'px';
+            ball.style.top = (y + yscroll) + 'px';
+        };
+
+        TweenMax.from("#kevin", 0.3, {
+            opacity: 0,
+            y: 10,
+            delay: .2
+        });
+
+        TweenMax.from("#nav1", 0.7, {
+            opacity: 0,
+            y: 10,
+            delay: .3
+        });
+        TweenMax.from("#nav2", 0.7, {
+            opacity: 0,
+            y: 10,
+            delay: .35
+        });
+        TweenMax.from("#nav3", 0.7, {
+            opacity: 0,
+            y: 10,
+            delay: .4
+        });
+
+        TweenMax.from("#tabs", .9, {
+            opacity: 0,
+            y: 10,
+            delay: .5
+        });
+
+        TweenMax.from("#pics", .9, {
+            opacity: 0,
+            y: 10,
+            delay: .7
+        });
+    </script>
+</body>
+
+</html>

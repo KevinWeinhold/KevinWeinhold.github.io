@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+html {
+    cursor: none;
+}
+
+body {
+    font: 1.2rem 'Raleway', Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    cursor: none;
+}
+
+#homebody {
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+}
+
+header h1 {
+    text-align: center;
+    vertical-align: center;
+    margin: auto;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+}
+
+header nav {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: none;
+}
+
+a:hover {
+    color: rgb(54, 57, 196);
+    transition: 500ms ease-in-out;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.container {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+header ul a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16;
+}
+
+.current a {
+    color: #E93B32;
+}
+
+img {
+    display: block;
+    width: 63vh;
+    margin-top: 10px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: none;
+}
+
+#resume {
+    width: 75vh;
+    margin-top: 10px;
+    /* height: 100%; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+}
+
+#pics h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#pics {
+    margin-bottom: 5vh;
+}
+
+button,
+#tippyboi,
+#social1 {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: none;
+}
+
+
+/* React project text centering */
+
+#tabs {
+    text-align: center;
+    width: 63vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#social img,
+#social button {
+    size: 25px;
+    width: 1.5rem;
+    display: inline-block;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+div {
+    text-align: center;
+}
+
+#social button {
+    padding: 0;
+    border: none;
+    background: none;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+
+/* cursor follow */
+
+
+/* .wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+} */
+
+#ball {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -25px 0 0 -25px;
+    pointer-events: none;
+}
+
+@media (max-width: 700px) {
+    #homebody {
+        margin-top: 15vh;
+        margin-bottom: 5vh;
+    }
+    .container {
+        width: 90%;
+    }
+    #ball {
+        display: none;
+    }
+    img {
+        width: 98%;
+    }
+    #resume {
+        width: 98%;
+    }
+    #tabs {
+        width: 96%;
+    }
+}
