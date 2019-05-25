@@ -40,12 +40,14 @@ a {
   color: black;
   text-decoration: none;
   cursor: none;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
 }
 
 a:hover {
   color: #3639c4;
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
 }
 
 ul {
@@ -78,8 +80,6 @@ img {
   width: 63vh;
   margin-top: 10px;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
   cursor: none;
 }
 
@@ -123,21 +123,43 @@ button,
   size: 25px;
   width: 1.5rem;
   display: inline-block;
-  margin-left: .5rem;
-  margin-right: .5rem;
 }
 
 div {
   text-align: center;
 }
 
+#social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#social1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+}
+
+#social1 a + a {
+  margin-left: 15px;
+}
+
+#social1 a + button {
+  margin-left: 15px;
+}
+
 #social button {
   padding: 0;
   border: none;
   background: none;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
 }
 
 /* cursor follow */
@@ -187,5 +209,10 @@ div {
   #tabs {
     width: 96%;
   }
+}
+
+button > #tippyboi {
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
 }
 /*# sourceMappingURL=style.css.map */
