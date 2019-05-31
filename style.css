@@ -6,14 +6,14 @@
 }
 
 html {
-  cursor: none;
+  cursor: default;
 }
 
 body {
   font: 1.2rem 'Raleway', Helvetica, sans-serif;
   padding: 0;
   margin: 0;
-  cursor: none;
+  cursor: default;
 }
 
 #homebody {
@@ -39,15 +39,10 @@ header nav {
 a {
   color: black;
   text-decoration: none;
-  cursor: none;
-  -webkit-transition: 500ms ease;
-  transition: 500ms ease;
 }
 
 a:hover {
   color: #3639c4;
-  -webkit-transition: 500ms ease;
-  transition: 500ms ease;
 }
 
 ul {
@@ -82,7 +77,6 @@ img {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  cursor: none;
 }
 
 #resume {
@@ -109,7 +103,7 @@ button,
   background: transparent;
   border: none;
   outline: none;
-  cursor: none;
+  cursor: pointer;
 }
 
 /* React project text centering */
@@ -175,15 +169,15 @@ div #pics {
     overflow: hidden;
 } */
 #ball {
-  width: 5px;
-  height: 5px;
+  width: 15px;
+  height: 15px;
   background: none;
   border: 1px solid black;
   border-radius: 50%;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: -2.5px 0 0 -2.5px;
+  margin: -7.5px 0 0 -7.5px;
   pointer-events: none;
 }
 
@@ -209,13 +203,9 @@ div #pics {
   #resume {
     width: 98%;
   }
-  #tabs {
+  #tabs,
+  #tabiframe {
     width: 96%;
   }
-}
-
-button > #tippyboi {
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
 }
 /*# sourceMappingURL=style.css.map */
