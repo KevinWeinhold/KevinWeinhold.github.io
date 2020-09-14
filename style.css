@@ -186,6 +186,10 @@ div #pics {
   text-align: center;
 }
 
+.projectsection {
+  margin-top: 5em;
+}
+
 /* cursor follow */
 /* .wrap {
     position: absolute;

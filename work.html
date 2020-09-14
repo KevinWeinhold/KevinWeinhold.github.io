@@ -25,9 +25,9 @@
         </nav>
     </header>
     <div class = "projectsection" id = 'kanify'>
-        <h1>Kanify Chrome Extension</h1>
+        <h1 id = kanifyh ><a href="https://chrome.google.com/webstore/detail/kanify/gibmifddoamhnlgbaofkpjaicpkkkdbd?hl=en&authuser=2">Kanify</a> Chrome Extension</h1>
         <div class = "li-section">
-            <p>
+            <p  id = 'kanifyp'>
                 Google Chrome extension that highlights Japanese Kanji learned from 
                 <a href="https://www.wanikani.com/">WaniKani</a>. Utilizes 
                 <a href="https://www.wanikani.com/">WaniKani's</a> RESTful 
@@ -40,20 +40,30 @@
             <img data-aos="fade-up" src="./img/Kanify_Screenshots_1.jpg">
             <img data-aos="fade-up" src="./img/Kanify_Screenshots_2.jpg">
         </div>
-        
+    </div>
+    <div class = "projectsection" id='randomTrick'>
+        <h1 data-aos="fade-up" >Random Snowboard Trick Generator</h1>
+        <p data-aos="fade-up">
+            React Native mobile application for snowboarders to generate random tricks.
+            Includes Easy, Medium, and Hard difficulties as well as a 'Grab only' mode 
+            for Jumps. 
+        </p>
+        <img data-aos="fade-up" src="./img/Random_trick_generator_sc1.jpg">
+        <img data-aos="fade-up" src="./img/Random_trick_generator_sc2.jpg">
+
     </div>
     <div class = "projectsection" id='tabs'>
-        <h1>State Press: React JS</h1>
-        <p>ASU sustainability statistics ranked among other major universities committing to combatting climate change.<br> Designed and implemented info into an interactive format using React. </p>
-        <iframe id='tabiframe' src="https://thestatepress.github.io/magazine-tabs-project/" width="100%" height="410" frameborder="100" id='iframe'></iframe>
+        <h1 data-aos="fade-up">State Press: React JS</h1>
+        <p data-aos="fade-up">ASU sustainability statistics ranked among other major universities committing to combatting climate change.<br> Designed and implemented info into an interactive format using React. </p>
+        <iframe data-aos="fade-up" id='tabiframe' src="https://thestatepress.github.io/magazine-tabs-project/" width="100%" height="410" frameborder="100" id='iframe'></iframe>
     </div>
     <div class = "projectsection" id='pics'>
-        <h1 id='avalonDev'>Avalon Development investor phamphlet</h1>
+        <h1 data-aos="fade-up" id='avalonDev'>Avalon Development investor phamphlet</h1>
         <img data-aos="fade-up" src="./img/avalon_webupload2.jpg">
         <img data-aos="fade-up" src="./img/avalon_webupload1.jpg" alt ="Avalon investor phamphlet">
     </div>
     <div class = "projectsection" id='pics'>
-        <h1 id='magcovers'>Magazine Covers</h1>
+        <h1 data-aos="fade-up" id='magcovers'>Magazine Covers</h1>
         <img data-aos="fade-up" src="./img/Copy of 1 (1)_page-0001.jpg" alt="Ashes Unity Issue 2017">
         <img data-aos="fade-up" src="./img/0001.jpg" alt="Pink Ashes Cover 2018">
         <img data-aos="fade-up" src="./img/elephantintheroom.jpg" alt="Elephant in the Room with Stella">
@@ -142,23 +152,25 @@
             delay: .4
         });
 
+        TweenMax.from("#kanifyh", .9, {
+            opacity: 0,
+            y: 10,
+            delay: .43
+        });
+
         TweenMax.from("#tabs", .9, {
+            opacity: 0,
+            y: 10,
+            delay: .6
+        });
+
+        TweenMax.from("#kanifyp", .9, {
             opacity: 0,
             y: 10,
             delay: .5
         });
 
-        TweenMax.from("#avalonDev", .9, {
-            opacity: 0,
-            y: 10,
-            delay: .55
-        });
-
-        TweenMax.from("#magcovers", .9, {
-            opacity: 0,
-            y: 10,
-            delay: .7
-        });
+       
     </script>
     <!-- AOS scroll stuffs / Scroll effects-->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
