@@ -24,9 +24,30 @@
         </nav>
     </header>
     <div>
-
-        <h1></h1>
-        <img id='resume' src="./img/resume2019_deskAssistant.jpg" alt="Resume 2019" id='resume'>
+        <!-- <div>
+            <div class = "resume-box">
+                <h1>Education</h1>
+                <div class="resume-box-details">
+                    <h2>Arizona State University</h2>
+                    <h3 class = "major">Major: Computer Science</h3>
+                    <h3 class = "major">Minor: Japanese</h3>
+                    <p>.</p>
+                </div>
+                
+            </div>
+            
+        </div> -->
+        
+        
+        <h1 id = "projects">Projects</h1>
+        <p id = "see-work">See <a href="work.html">WORK</a></p>
+        <img id='resume' src="./img/Resume_experience.jpg" alt="Resume 2019" id='resume'>
+        <div id = "social">
+            <div id = "social2">
+                <!-- <button id='tippyboi' onclick="copy('4803529308')"><img src="./img/iconmonstr-phone-1.svg" alt="phone"> 480 352 9308</button> -->
+                <img src="./img/iconmonstr-phone-1.svg" alt="Phone Number"> 480 342 9308</div>
+            </div>
+        </div>
     </div>
 
     <!-- Follow mouse -->
@@ -35,6 +56,25 @@
         <div id="ball"></div>
     </div>
 
+    <script>
+        // copy function
+        function copy(text) {
+            var textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+        }
+
+        // Tippy
+        tippy('#tippyboi', {
+            content: "Copied 480 352 9308",
+            animation: 'shift-toward',
+            placement: 'bottom',
+            trigger: 'click',
+        })
+    </script>
 
     <script type="text/javascript">
         var $ = document.querySelector.bind(document);
@@ -101,10 +141,22 @@
             delay: .4
         });
 
+        TweenMax.from("#projects", .8, {
+            opacity: 0,
+            y: 10,
+            delay: .45
+        });
+
+        TweenMax.from("#see-work", .8, {
+            opacity: 0,
+            y: 10,
+            delay: .5
+        });
+
         TweenMax.from("#resume", .8, {
             opacity: 0,
             y: 10,
-            delay: .4
+            delay: .55
         });
     </script>
 </body>

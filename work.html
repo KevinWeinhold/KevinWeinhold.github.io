@@ -24,17 +24,35 @@
             </ul>
         </nav>
     </header>
-    <div id='tabs'>
+    <div class = "projectsection" id = 'kanify'>
+        <h1>Kanify Chrome Extension</h1>
+        <div class = "li-section">
+            <p>
+                Google Chrome extension that highlights Japanese Kanji learned from 
+                <a href="https://www.wanikani.com/">WaniKani</a>. Utilizes 
+                <a href="https://www.wanikani.com/">WaniKani's</a> RESTful 
+                API to store the user's kanji data in Google Chrome's synchronous storage. 
+                <a href="https://chrome.google.com/webstore/detail/kanify/gibmifddoamhnlgbaofkpjaicpkkkdbd?hl=en&authuser=2">
+                    Published to Chrome Store.
+                </a>
+            </p>
+            <img data-aos="fade-up" src="./img/Kanify_Screenshots_4.jpg">
+            <img data-aos="fade-up" src="./img/Kanify_Screenshots_1.jpg">
+            <img data-aos="fade-up" src="./img/Kanify_Screenshots_2.jpg">
+        </div>
+        
+    </div>
+    <div class = "projectsection" id='tabs'>
         <h1>State Press: React JS</h1>
-        <p>ASU sustainability statistics ranked among other major universities committing to combatting climate change. Assisted in designing and implementing the info into an interactive format using React. </p>
+        <p>ASU sustainability statistics ranked among other major universities committing to combatting climate change.<br> Designed and implemented info into an interactive format using React. </p>
         <iframe id='tabiframe' src="https://thestatepress.github.io/magazine-tabs-project/" width="100%" height="410" frameborder="100" id='iframe'></iframe>
     </div>
-    <div>
-        <h1>Avalon Development investor phamphlet</h1>
+    <div class = "projectsection" id='pics'>
+        <h1 id='avalonDev'>Avalon Development investor phamphlet</h1>
         <img data-aos="fade-up" src="./img/avalon_webupload2.jpg">
         <img data-aos="fade-up" src="./img/avalon_webupload1.jpg" alt ="Avalon investor phamphlet">
     </div>
-    <div id='pics'>
+    <div class = "projectsection" id='pics'>
         <h1 id='magcovers'>Magazine Covers</h1>
         <img data-aos="fade-up" src="./img/Copy of 1 (1)_page-0001.jpg" alt="Ashes Unity Issue 2017">
         <img data-aos="fade-up" src="./img/0001.jpg" alt="Pink Ashes Cover 2018">
@@ -128,6 +146,12 @@
             opacity: 0,
             y: 10,
             delay: .5
+        });
+
+        TweenMax.from("#avalonDev", .9, {
+            opacity: 0,
+            y: 10,
+            delay: .55
         });
 
         TweenMax.from("#magcovers", .9, {
